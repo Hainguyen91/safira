@@ -1,0 +1,200 @@
+/* >>>>> cấu hình cơ bản <<<<<<<<<< */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+/* >>>>>>>>>embed<<<<<<<<< */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* <<<<<<<<header1>>>>>>>>>>>> */
+header {
+  width: 100%;
+  height: 9rem;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+.container {
+  display: flex;
+  position: relative;
+  max-width: 141rem;
+  margin: auto;
+  padding: 0 1.5rem;
+  justify-content: space-between;
+  height: 9rem;
+  align-items: center;
+}
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 31px;
+  top: 0px;
+}
+.login {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  letter-spacing: 0.9px;
+  outline: none;
+  color: rgb(77, 77, 77);
+}
+.login:hover {
+  color: red;
+}
+#input_search {
+  width: 100%;
+  max-width: 278px;
+  height: 4.6rem;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 99px;
+  padding: 1.5rem;
+  background-color: rgb(246, 246, 246);
+  color: rgb(61, 61, 61);
+  outline: none;
+}
+.header_search {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 32rem;
+  height: 46px;
+}
+.input_box {
+  width: 278px;
+}
+
+.icon_search {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 14px;
+  right: 5rem;
+}
+.icon_shop {
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-left: 3px;
+}
+.icon_shop:hover {
+  color: rgb(216, 1, 1);
+}
+/* >>>>>>>>>>>Menu header>>>>>>>>>>>>>> */
+.menu {
+  display: flex;
+  max-width: 65rem;
+  margin: auto;
+  padding: 0 1.5rem;
+  height: 4.92rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.bt_shop,
+.bt_accessories {
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+/* <<<<<<<<<Hiệu ứng cho menu>>>>>>>>>> */
+.bt {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  color: rgb(52, 52, 52);
+}
+.bt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: transform 0.1s ease;
+}
+.bt:hover {
+  color: red;
+  transform: translateY(-1px);
+}
+.bt:hover::after {
+  transform: scaleX(1);
+  transform-origin: top;
+}
+/* <<<<<<<<<<<<Shop>>>>>>>>>>>>>>>> */
+.menu_shop,
+.menu_accessories {
+  position: relative;
+  display: inline-block;
+}
+.lt_product {
+  min-width: 65rem;
+  height: auto;
+  display: none;
+  position: absolute;
+  right: calc(100% - 37rem);
+}
+.list_product {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  min-width: 100%;
+  padding: 1rem;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+.pro {
+  padding: 3rem;
+}
+.menu_product:hover,
+.acces:hover {
+  color: red;
+}
+.list {
+  margin-top: 1.7rem;
+  font-weight: lighter;
+}
+.product {
+  color: rgb(117, 117, 117);
+}
+.product:hover {
+  color: rgb(0, 0, 0);
+}
+.menu_shop:hover .lt_product,
+.menu_accessories:hover .lt_accessories {
+  display: block;
+}
+.acces {
+  font-weight: lighter;
+  color: rgb(117, 117, 117);
+  display: block;
+  padding: 1rem;
+}
+.lt_accessories {
+  min-width: 20rem;
+  height: auto;
+  position: absolute;
+  display: none;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.15);
+  right: calc(100% - 17rem);
+}
