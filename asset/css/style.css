@@ -88,6 +88,36 @@ body {
   border-radius: 5px;
   padding: 5px;
 }
+/* =========hiệu ứng icon chuyển slide============== */
+.bt_left {
+  height: 53px;
+  width: 53px;
+  position: absolute;
+  left: -5px;
+}
+.bt_right {
+  height: 53px;
+  width: 53px;
+  position: absolute;
+  right: -50px;
+}
+.round {
+  color: rgb(230, 230, 230);
+  background: none;
+  font-size: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 50%;
+  height: 53px;
+  width: 53px;
+  background-color: white;
+  margin: 0 -25px;
+  cursor: pointer;
+}
+.round:hover {
+  background-color: red;
+  color: white;
+  border: red;
+}
 /* >>>>>>>>>embed<<<<<<<<< */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -463,23 +493,6 @@ header {
   justify-content: space-between;
   top: 10rem;
 }
-.round {
-  color: rgb(230, 230, 230);
-  background: none;
-  font-size: 20px;
-  border: 1px solid rgb(230, 230, 230);
-  border-radius: 50%;
-  height: 53px;
-  width: 53px;
-  background-color: white;
-  margin: 0 -25px;
-  cursor: pointer;
-}
-.round:hover {
-  background-color: red;
-  color: white;
-  border: red;
-}
 .text_pic {
   margin: 15px 0;
 }
@@ -607,4 +620,220 @@ header {
   object-fit: cover;
   overflow: hidden;
   cursor: pointer;
+}
+/* =========hot deals========= */
+.hot_deals {
+  position: relative;
+  width: 100%;
+  max-width: 138.3rem;
+  height: auto;
+  max-height: 31.6rem;
+  margin: 8px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.deals {
+  display: flex;
+  position: relative;
+  width: 68.2rem;
+  height: 31.6rem;
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.deals:hover {
+  border: 1.5px solid rgb(255, 132, 132);
+}
+.deals_pic {
+  width: 312px;
+  height: 312px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.deals img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+.deals:hover img {
+  transform: scale(1.1);
+}
+.deals_content {
+  display: flex;
+  flex-direction: column;
+  width: 366px;
+  height: 312px;
+  justify-content: center;
+  align-items: center;
+}
+.deals_content strong {
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.deals_content p:nth-child(2) {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 10px;
+}
+.deals strong:hover {
+  color: red;
+}
+.deals:hover .add_view {
+  opacity: 1;
+  transform: translateY(0); /* trượt lên vị trí đúng */
+  visibility: visible;
+}
+.deals_add_view.add_view {
+  top: 260px;
+  width: 312px;
+}
+.deals_round {
+  top: 13rem;
+}
+/* =========== featured ============ */
+.featured {
+  width: 100%;
+  max-width: 138.3rem;
+  height: 100%;
+  max-height: 16.3rem;
+  display: flex;
+  margin: 8px auto 0px;
+  justify-content: space-between;
+}
+.feat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 331px;
+  height: 163px;
+  border: 2px solid rgb(237, 237, 237);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.feat:hover {
+  border: 1px solid rgb(255, 132, 132);
+}
+.featured_pic {
+  width: 121px;
+  height: 121px;
+  overflow: hidden;
+}
+.featured_pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.feat:hover img {
+  transform: scale(1.1);
+}
+.featured_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 168px;
+  height: 121px;
+}
+.featured_content strong {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 6px;
+}
+.featured_content strong:hover {
+  color: red;
+}
+.featured_content p:nth-child(2) {
+  font-size: 13px;
+  font-weight: 200;
+  padding: 6px;
+}
+/* =========== latest bolg =========== */
+.latest {
+  width: 100%;
+  max-width: 138.3rem;
+  height: auto;
+  display: flex;
+  margin: 8px auto 10px;
+  justify-content: space-between;
+}
+.lat__box {
+  position: relative;
+  width: 448px;
+  height: 100%;
+}
+.lat__pic {
+  width: 448px;
+  height: 252px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.lat__pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.lat__pic:hover img {
+  transform: scale(1.1);
+}
+.lat--blog {
+  position: absolute;
+  font-size: 12px;
+  font-weight: lighter;
+  color: rgb(92, 92, 92);
+  background-color: white;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 99px;
+  padding: 6px 25px;
+  top: 210px;
+  left: 7px;
+  cursor: pointer;
+}
+.lat--blog:hover {
+  color: red;
+}
+.lat__box h5 {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 32px 0px 0px;
+  padding: 0px 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.lat__box h5:hover {
+  color: red;
+}
+.lat__box p {
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-top: 13px;
+  padding: 0px 10px;
+  display: -webkit-box; /* Kích hoạt flexbox cũ kiểu webkit */
+  -webkit-box-orient: vertical; /* Hướng xếp theo chiều dọc */
+  -webkit-line-clamp: 2; /* Giới hạn tối đa 3 dòng */
+  overflow: hidden; /* Ẩn phần chữ bị tràn */
+}
+.lat--under {
+  width: 35px;
+  height: 2px;
+  background-color: #dad9d9;
+  margin: 13px 12px 0px;
+}
+/* =========footer======== */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100vw;
+  height: 100%;
+  max-height: 446px;
 }
